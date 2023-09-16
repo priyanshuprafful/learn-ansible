@@ -4,3 +4,6 @@
     - name: Print Hello
       ansible.builtin.debug:
         msg: Hello World From Ansible By Priyanshu !!
+    - name: Another Message
+      ansible.builtin.debug:
+        msg: This message is not another task , it is in same task !!
