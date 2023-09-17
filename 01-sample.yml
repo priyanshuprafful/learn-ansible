@@ -7,3 +7,4 @@
     - name: Another Message
       ansible.builtin.debug:
         msg: This message is not another task , it is in same task !!
+
