@@ -8,4 +8,5 @@
         ICC: Investing.Coding.Cloud
       ansible.builtin.debug:
         msg: URL = {{ URL }}
+      ansible.builtin.debug:
         msg: ICC = {{ ICC }}
