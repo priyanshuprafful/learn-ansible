@@ -1,5 +1,5 @@
 - name: Play Variables
-  hosts: all
+  hosts: localhost # all is not needed we want it to run on local host or same host or workstation in our case
   vars:
     URL: play.example.com
   tasks:
