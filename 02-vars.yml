@@ -44,3 +44,14 @@
         msg: "{{name}} is my name ,  Hostname of server is {{ ansible_hostname  }}"
 ##i will give url from command line and ansible_hostname is the predefined variable which gives ip
 ## address of the host .
+
+- name: Register a Variable
+  hosts: localhost
+  tasks:
+    - name: Get Uptime output
+      ansible.builtin.shell: uptime
+      register: out
+
+    - name: Print Out
+      ansible.builtin.debug:
+        msg: "{{ out }}"
