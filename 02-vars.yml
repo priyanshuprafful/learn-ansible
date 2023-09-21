@@ -29,9 +29,9 @@
 
 
 - name: Vars from inventory
-  hosts: all
+  hosts: localhost
   tasks:
     - name: Print Variables from inventory
       ansible.builtin.debug:
         msg: URL = {{ URL }}
-## here we are declaring URL variable on our inventory file 
+## here we are declaring URL variable on our inventory file
