@@ -22,7 +22,16 @@
   hosts: localhost # all is not needed we want it to run on local host or same host or workstation in our case
   tasks:
     - name: Print Play Variable from task
-      vars:   # these vars are only for this task , next task on same play cannot access it 
+      vars:   # these vars are only for this task , next task on same play cannot access it
         URL: task.example.com
       ansible.builtin.debug:
         msg: URL = {{ URL }}
+
+
+- name: Vars from inventory
+  hosts: all
+  tasks:
+    - name: Print Variables from inventory
+      ansible.builtin.debug:
+        msg: URL = {{ URL }}
+## here we are declaring URL variable on our inventory file 
