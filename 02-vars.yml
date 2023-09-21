@@ -37,10 +37,10 @@
 ## here we are declaring URL variable on our inventory file
 
 - name: Vars from Ansible Facts
-  hosts: localhost
+  hosts: all
   tasks:
     - name: Print Predefined variables
       ansible.builtin.debug:
-        msg: "{{name}} is my name  and Hostname of server is { { ansible_hostname  } }"
+        msg: "{{name}} is my name ,  Hostname of server is {{ ansible_hostname  }}"
 ##i will give url from command line and ansible_hostname is the predefined variable which gives ip
 ## address of the host .
