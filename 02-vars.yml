@@ -41,7 +41,7 @@
   tasks:
     - name: Print Predefined variables
       ansible.builtin.debug:
-        msg: "{{name}} is my name ,  Hostname of server is {{ ansible_hostname  }}"
+        msg: "{{myname}} is my name ,  Hostname of server is {{ ansible_hostname  }}"
 ##i will give url from command line and ansible_hostname is the predefined variable which gives ip
 ## address of the host .
 
