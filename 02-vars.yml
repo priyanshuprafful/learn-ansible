@@ -29,7 +29,7 @@
 
 
 - name: Vars from inventory
-  hosts: localhost
+  hosts: all
   tasks:
     - name: Print Variables from inventory
       ansible.builtin.debug:
