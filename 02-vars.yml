@@ -6,3 +6,13 @@
     - name: Print Play Variable
       ansible.builtin.debug:
         msg: URL = {{ URL }}
+
+
+- name: Play Variables from files
+  hosts: localhost # all is not needed we want it to run on local host or same host or workstation in our case
+  vars_files:
+    - 02.01-vars.yml
+  tasks:
+    - name: Print Play Variable from File
+      ansible.builtin.debug:
+        msg: URL = {{ URL }}
