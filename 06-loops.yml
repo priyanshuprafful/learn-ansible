@@ -10,3 +10,11 @@
         - Mango
         - Peach
         - Guava
+    - name: Print Fruit Name with Quantity
+      debug:
+        msg: Fruit Name - {{ item.name }} , Quantity - {{ item.quantity }}
+      loop:
+        - { name: "Apple" , quantity: 10}
+        - { name: "Banana" , quantity: 20}
+        - { name: "Mango" , quantity: 30}
+        - { name: "Guava" , quantity: 40}
